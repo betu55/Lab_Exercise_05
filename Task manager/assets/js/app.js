@@ -30,7 +30,7 @@ function addNewTask(e) {
         const link = document.createElement('a');
 
         link.className = 'delete-item secondary-content';
-        link.innerHTML = '<a href="">X</a>';
+        link.innerHTML = '<span href="">X</span>';
 
         li.appendChild(link);
 
@@ -50,7 +50,17 @@ function clearAllTasks() {
 }
    
 function filterTasks(e) {
-    console.log("Task Filter ...");
+    let keyWord = filter.value;
+    let taskValues = document.querySelectorAll(".collection-item");
+
+    taskValues.forEach(elt => {
+        if(elt.textContent.indexOf(keyWord)){
+            elt.style.display = "none";
+        }
+        else{
+            elt.style.display = "block";
+        }
+    });
 }
 
 function removeTask(e) {
