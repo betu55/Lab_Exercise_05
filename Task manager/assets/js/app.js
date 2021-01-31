@@ -4,12 +4,15 @@ const form = document.querySelector("#task-form");
 const filter = document.querySelector("#filter");
 const taskList = document.querySelector(".collection");
 const clearBtn = document.querySelector(".clear-tasks");
+const sortIt = document.querySelector(".browser-default");
+console.log(sortIt.value);
 
-form.addEventListener('click', addNewTask);
-// form.addEventListener('submit', addNewTask);
+// form.addEventListener('click', addNewTask);
+form.addEventListener('submit', addNewTask);
 clearBtn.addEventListener('click', clearAllTasks);
 filter.addEventListener('keyup', filterTasks);
 taskList.addEventListener('click', removeTask);
+sortIt.addEventListener('change', sortTasks);
 
 function addNewTask(e) {
     //alert("Add New Task ....");
@@ -24,13 +27,13 @@ function addNewTask(e) {
         const li = document.createElement('li');
 
         li.className = 'collection-item';
-
+        li.value = new Date().getMilliseconds();
         li.appendChild(document.createTextNode(taskInput.value));
 
         const link = document.createElement('a');
 
         link.className = 'delete-item secondary-content';
-        link.innerHTML = '<span href="">X</span>';
+        link.innerHTML = '<button>x<button>';
 
         li.appendChild(link);
 
@@ -67,6 +70,38 @@ function removeTask(e) {
     if (e.target.parentElement.classList.contains('delete-item')){
         if (confirm('Are You Sure about that ?')){
             e.target.parentElement.parentElement.remove();
+        }
+    }
+}
+
+function sortTasks(){
+    const presentTasks = document.querySelectorAll('.collection-item');
+    let eltTimevalues = [];
+
+    presentTasks.forEach(elt => {
+        console.log(elt.value);
+        eltTimevalues.push(elt.value);
+    });
+
+    eltTimevalues.sort();
+
+    if(sortIt.value == "0"){
+        for (let i = 0; i < eltTimevalues.length; i++){
+            presentTasks.forEach(elts => {
+                if(eltTimevalues[i] == elts.value)
+                    taskList.appendChild(elts);
+            });
+        }
+    }
+
+    else{
+        
+        for (let i = eltTimevalues.length; i>=0; i--){
+            presentTasks.forEach(elts => {
+                if(eltTimevalues[i] == elts.value){
+                    taskList.appendChild(elts);
+                }
+            });
         }
     }
 }
