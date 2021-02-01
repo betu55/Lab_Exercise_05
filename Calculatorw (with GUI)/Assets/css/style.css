@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#strinput{
+    float: left;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    padding: 2% 0 2% 0;
+    background-color: #ccc;  
+}
+
+div p{
+    color: #bbb;
+}
+
+.btn-primary{
+    margin-top: 10%;
+    width: 100% !important;
+    padding: 15% 0 15% 0 !important;
+    border-radius: 10%;
+    border: none !important;
+    background-color: rgb(191, 76, 76) !important;
+}
+.btn-secondary{
+    width: 100% !important;
+    margin-top: 10%;
+    border: none !important;
+    background-color: #999 !important;
+    padding: 15% 0 15% 0;
+    border-radius: 10%;
+}
+
+.my-container{
+    background-color: #555;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 30% !important;
+    border: solid;
+    width: min-content ;
+}
+
+.bottom-control{
+    margin-bottom: 5%;
+}
+
+.btn-danger{
+    margin-top: 10%;
+    width: 100% !important;
+    border-radius: 5%;
+    padding: 5% 0 5% 0 !important;
+    color: black;
+    border: none !important;
+    background-color: rgb(82, 177, 5) !important;
+    margin-bottom: 10%;
+}
+.manual{
+    color: #bbb;
+    margin-left: 5% !important;
+}

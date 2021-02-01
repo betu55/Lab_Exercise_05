@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=3.0">
+    <title>simple calc with gui</title>
+    <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="Assets/css/Bootstrap/bootstrap.css">
+</head>
+<body>
+    <header>
+
+    </header>
+    
+    <main>
+        <div class="container my-container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <input type="text" name="something" dir="ltr" id="strinput">
+                </div>
+                <div class="col-sm-5 text-right">
+                    <p>Simple_Calc v1.0<p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"><button onclick="_btn7()" class="btn-primary">7</button></div>
+                <div class="col-sm-3"><button onclick="_btn8()" class="btn-primary">8</button></div>
+                <div class="col-sm-3"><button onclick="_btn9()" class="btn-primary">9</button></div>
+                <div class="col-sm-3"><button onclick="_btnAdd()" class="btn-secondary">+</button></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"><button onclick="_btn4()" class="btn-primary">4</button></div>
+                <div class="col-sm-3"><button onclick="_btn5()" class="btn-primary">5</button></div>
+                <div class="col-sm-3"><button onclick="_btn6()" class="btn-primary">6</button></div>
+                <div class="col-sm-3"><button onclick="_btnSub()" class="btn-secondary">-</button></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"><button onclick="_btn1()" class="btn-primary">1</button></div>
+                <div class="col-sm-3"><button onclick="_btn2()" class="btn-primary">2</button></div>
+                <div class="col-sm-3"><button onclick="_btn3()" class="btn-primary">3</button></div>
+                <div class="col-sm-3"><button onclick="_btnMul()" class="btn-secondary">*</button></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"><button onclick="_btnClear()" class="btn-primary">CE</button></div>
+                <div class="col-sm-3"><button onclick="_btn0()" class="btn-primary">0</button></div>
+                <div class="col-sm-3"><button onclick="_btnDot()" class="btn-primary">.</button></div>
+                <div class="col-sm-3"><button onclick="_btnDiv()" class="btn-secondary bottom-control">/</button></div>
+            </div>
+            <div class="row justify-content-end">
+                <div class="col-sm-6 text-center"><button onclick="_btnNxt()" class="btn-danger">Next=></button></div>
+            </div>
+            <div class="row justify-content-center manual">
+                <h4>Manual:</h4>
+                <ul>
+                    <li>Choose a number and hit next to add to collection</li>
+                    <li>Choose another number to add to collection</li>
+                    <li>Then hit an operator to calculate for the collected numbers.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <script src="Assets/js/app.js"></script>
+    </footer>
+</body>
+</html>
