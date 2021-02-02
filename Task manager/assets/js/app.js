@@ -5,6 +5,7 @@ const filter = document.querySelector("#filter");
 const taskList = document.querySelector(".collection");
 const clearBtn = document.querySelector(".clear-tasks");
 const sortIt = document.querySelector(".browser-default");
+const reloadIcon = document.querySelector('.fa');
 console.log(sortIt.value);
 
 // form.addEventListener('click', addNewTask);
@@ -13,6 +14,7 @@ clearBtn.addEventListener('click', clearAllTasks);
 filter.addEventListener('keyup', filterTasks);
 taskList.addEventListener('click', removeTask);
 sortIt.addEventListener('change', sortTasks);
+reloadIcon.addEventListener('click', reloadPage);
 
 function addNewTask(e) {
     //alert("Add New Task ....");
@@ -27,7 +29,7 @@ function addNewTask(e) {
         const li = document.createElement('li');
 
         li.className = 'collection-item';
-        li.value = new Date().getMilliseconds();
+        li.value = new Date().getSeconds();
         li.appendChild(document.createTextNode(taskInput.value));
 
         const link = document.createElement('a');
@@ -64,6 +66,11 @@ function filterTasks(e) {
             elt.style.display = "block";
         }
     });
+}
+
+function reloadPage() {
+    //using the reload fun on location object 
+    location.reload();
 }
 
 function removeTask(e) {

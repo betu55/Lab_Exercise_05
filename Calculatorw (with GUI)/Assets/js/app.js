@@ -39,7 +39,13 @@ function _btnDiv(){
     var leny = toBeCalculated.length;
 
     for (let i = 1; i < leny; i++){
-        answer /= toBeCalculated[i];
+        if(toBeCalculated[i] === 0){
+            window.alert("Can't devide by zero");
+            answer = "Error"
+        }
+        else{
+            answer /= toBeCalculated[i];
+        }
     }
 
     console.log(answer);
